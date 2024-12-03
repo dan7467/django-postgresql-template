@@ -1,0 +1,36 @@
+html {
+    background-color: #C1BAA1;
+}
+
+#body {
+    background-color: inherit;
+    text-align: center;
+}
+
+#navbar {
+    background-color: #A59D84;
+    font-size: 20px;
+}
+
+#main_container {
+    background-color: inherit;
+}
+
+#navbar_container {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#logo {
+    font-size: 32px;
+}
+
+/* TO-DO: fix fields of forms to be less wide */
+
+/* .form-control {
+    max-width: 300px;
+}
+
+.forms {
+    align-items: center;
+} */
