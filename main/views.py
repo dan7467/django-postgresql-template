@@ -20,10 +20,11 @@ def register_view(request):
         username = request.POST['username']
         password = request.POST['password']
         confirm_password = request.POST['confirm_password']
+        email = request.POST['email']
         
         if password == confirm_password:
             try:
-                user = User.objects.create_user(username=username, password=password)
+                user = User.objects.create_user(username=username, password=password, email=email)
                 user.save()
                 messages.success(request, 'Registration successful! Please log in.')
                 return redirect('login')
