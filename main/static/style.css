@@ -25,6 +25,11 @@ html {
     font-size: 32px;
 }
 
+#table_row_header {
+    width: 200px;
+    max-width: 200px;
+}
+
 /* TO-DO: fix fields of forms to be less wide */
 
 /* .form-control {

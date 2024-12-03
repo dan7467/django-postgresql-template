@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib import messages
 
@@ -9,7 +10,11 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
-def register_user(request):
+@login_required
+def my_profile(request):
+    return render(request, 'my_profile.html')
+
+def register_view(request):
     if request.method == 'POST':
         
         username = request.POST['username']
@@ -30,7 +35,7 @@ def register_user(request):
             
     return render(request, 'register.html')
 
-def login_user(request):
+def login_view(request):
     if request.method == 'POST':
         
         username = request.POST['username']
@@ -46,6 +51,6 @@ def login_user(request):
             
     return render(request, 'login.html')
 
-def logout_user(request):
+def logout_view(request):
     logout(request)
     return redirect('home')
