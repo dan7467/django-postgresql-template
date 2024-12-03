@@ -1,14 +1,29 @@
+:root {
+    --bg: #C1BAA1;
+    --navbar: #A59D84; 
+    --text: #black;
+}
+
 html {
-    background-color: #C1BAA1;
+    background-color: var(--bg);
+}
+
+#main_site_buttons {
+    color: var(--text);
 }
 
 #body {
     background-color: inherit;
     text-align: center;
+    color: var(--text);
+}
+
+a, p, h1, h2, h3, h4, h5, h6, a, span, li, td, th, label {
+    color: var(--text);
 }
 
 #navbar {
-    background-color: #A59D84;
+    background-color: var(--navbar);
     font-size: 20px;
 }
 
@@ -23,6 +38,7 @@ html {
 
 #logo {
     font-size: 32px;
+    color: var(--text);
 }
 
 #table_row_header {
@@ -47,6 +63,11 @@ input {
     margin-left: auto; /* Centers input inside the form */
     margin-right: auto;
 }
+
+#user_menu {
+    margin-right: 40px;
+}
+
 /* .centered {
     display: flex;
     justify-content: center;
