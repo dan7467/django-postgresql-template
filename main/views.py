@@ -9,7 +9,7 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
-def register(request):
+def register_user(request):
     if request.method == 'POST':
         
         username = request.POST['username']
@@ -30,7 +30,7 @@ def register(request):
             
     return render(request, 'register.html')
 
-def login(request):
+def login_user(request):
     if request.method == 'POST':
         
         username = request.POST['username']
@@ -46,6 +46,6 @@ def login(request):
             
     return render(request, 'login.html')
 
-def logout(request):
+def logout_user(request):
     logout(request)
     return redirect('home')
