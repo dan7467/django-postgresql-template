@@ -1,3 +1,3 @@
 from django.db import models
 
-# Create your models here.
+# All of the schemas are in PostgreSQL (visible from pgAdmin, or from psql by queries)

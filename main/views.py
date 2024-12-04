@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.http import JsonResponse
 
+# TO-DO 1.1: create a settings page, which the dark_mode will be toggled from
+# TO-DO 1.2: on every login/logout - take the current value of dark_theme (session variable) and update in db, for persistence
 @login_required
 def toggle_dark_theme(request):
     if request.method == "POST":
